@@ -1,9 +1,9 @@
 import json
 
-from .anomaly_detector import AnomalyDetector
-from .event_consumer import EventConsumer
-from .event_producer import EventProducer
-from .event_topic import EventTopic
+from anomaly_detector import AnomalyDetector
+from event_consumer import EventConsumer
+from event_producer import EventProducer
+from event_topic import EventTopic
 
 
 def load_data(file_path):
@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     print("\nDetected Events:")
 
-    for event in result["events_consumed"]:
+    for event in result["anomalies_detected"]:
         print(f"\nService: {event['service']}")
         print(f"Timestamp: {event['timestamp']}")
         print(f"Type: {event['type']}")
